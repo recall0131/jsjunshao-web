@@ -14,7 +14,7 @@ const rateLimit = require('express-rate-limit');
 const app = express();
 const PORT = process.env.PORT || 3000;
 const JWT_SECRET = process.env.JWT_SECRET || 'jsjunshao-admin-secret-2026';
-const STATIC_DIR = '/var/www/jsjunshao';
+const STATIC_DIR = process.env.STATIC_DIR || '/var/www/jsjunshao';
 
 // Middleware
 app.use(cors({ origin: ['https://jsjunshao.lizheng.info', 'http://localhost:3000'] }));
@@ -134,7 +134,7 @@ app.get('/api/auth/me', authMiddleware, (req, res) => {
 });
 
 // ================== IMAGE UPLOAD ==================
-const IMAGE_UPLOAD_DIR = '/var/www/jsjunshao/images/lawyers';
+const IMAGE_UPLOAD_DIR = process.env.IMAGE_UPLOAD_DIR || '/var/www/jsjunshao/images/lawyers';
 if (!fs.existsSync(IMAGE_UPLOAD_DIR)) {
   fs.mkdirSync(IMAGE_UPLOAD_DIR, { recursive: true });
 }
@@ -470,7 +470,7 @@ app.get('/c/lvshifengcai', (req, res) => {
     return '<div class="lawyer-card '+roleClass(l.role)+'"><a href="/a/'+slug+'"><img src="'+photo+'" alt="'+l.name+'"><div class="info"><h3>'+l.name+'</h3><span class="role">'+roleLabel(l.role)+'</span>'+(l.title?'<p>'+l.title+'</p>':'')+'</div></a></div>';
   }).join('');
 
-  const css = fs.readFileSync('/var/www/jsjunshao/style.css','utf8');
+  const css = fs.readFileSync(path.join(STATIC_DIR, 'style.css'),'utf8');
   const topbar = '<nav class="topbar" style="background:#1B3A5C;color:#fff;padding:0 40px;height:56px;display:flex;align-items:center;justify-content:space-between"><div style="font-size:16px;font-weight:700">江苏<span style="color:#C9A84C">君劭</span>律师事务所</div><a href="/" style="color:rgba(255,255,255,.8);text-decoration:none;font-size:13px">返回首页</a></nav>';
   const footer = '<footer style="text-align:center;padding:32px;color:#aaa;font-size:13px;margin-top:40px">© 2024 江苏君劭律师事务所 · 电话：025-85336806 · 地址：南京市鼓楼区南通路118号三号楼六楼</footer>';
   const html = '<!DOCTYPE html><html lang="zh-CN"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>律师团队 - 江苏君劭律师事务所</title><style>'+css+'</style></head><body>'+topbar+'<main class="container"><h1>律师团队</h1><div class="lawyer-grid">'+cards+'</div></main>'+footer+'</body></html>';
