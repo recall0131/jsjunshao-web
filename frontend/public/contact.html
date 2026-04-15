@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>联系我们 - 江苏君劭律师事务所</title>
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 32 32%22%3E%3Crect width=%2232%22 height=%2232%22 rx=%224%22 fill=%22%231B3A5C%22/%3E%3Ctext x=%2250%25%22 y=%2255%25%22 dominant-baseline=%22middle%22 text-anchor=%22middle%22 font-size=%2218%22 fill=%22%23C9A84C%22 font-family=%22serif%22%3E%E5%90%9F%3C/text%3E%3C/svg%3E">
+  <meta name="description" content="联系江苏君劭律师事务所，专业律师将在24小时内回复您的咨询。提供公司法、建设工程、知识产权等领域的法律咨询预约服务。">
+  <meta property="og:title" content="联系我们 - 江苏君劭律师事务所">
+  <meta property="og:description" content="联系江苏君劭律师事务所，专业律师24小时内回复，提供法律咨询预约服务。">
+  <meta property="og:type" content="website">
+  <link rel="canonical" href="https://jsjunshao.lizheng.info/contact.html">
+  <>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@300;400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <style>
+    /* Private: Contact page */
+    .contact-page-wrap { padding-top: 70px; }
+  </style>
+</head>
+<body class="contact-page-wrap">
+
+  <!-- Navigation -->
+  <nav class="navbar">
+    <div class="nav-logo">江苏<span>君劭</span>律师事务所</div>
+          <ul class="nav-links">
+        <li><a href="index.html" class="active">首页</a></li>
+        <li><a href="practice-areas.html">专业领域</a></li>
+        <li><a href="team.html">律师团队</a></li>
+        <li><a href="insights.html">研究成果</a></li>
+        <li><a href="about.html">关于我们</a></li>
+      </ul>
+    <a href="contact.html" class="nav-cta">免费咨询</a>
+    <button class="hamburger" id="hamburger" aria-label="菜单"><span></span><span></span><span></span></button>
+  </nav>
+  <div class="mobile-menu" id="mobileMenu">
+    <a href="index.html">首页</a><a href="about.html">关于我们</a><a href="practice-areas.html">专业领域</a><a href="team.html">律师团队</a><a href="insights.html">研究成果</a>
+    <a href="contact.html" class="mobile-cta">免费咨询</a>
+  </div>
+
+  <!-- Banner -->
+  <section class="page-banner">
+    <div class="banner-content">
+      <h1>联系我们<span></span></h1>
+      <p>专业律师为您提供免费法律咨询</p>
+      <div class="breadcrumb"><a href="index.html">首页</a> / 联系我们</div>
+    </div>
+  </section>
+
+  <!-- Contact Layout -->
+  <section class="content-block bg-white">
+    <div class="container">
+      <div class="contact-layout">
+
+        <!-- Form -->
+        <div class="contact-form-wrap">
+          <h3>在线留言</h3>
+          <p>请填写以下信息，我们的律师将在24小时内与您联系</p>
+          <form class="contact-form" id="contactForm">
+            <div class="form-row">
+              <div class="form-group">
+                <label>姓名 <em>*</em></label>
+                <input type="text" name="name" placeholder="您的姓名" required>
+              </div>
+              <div class="form-group">
+                <label>手机 <em>*</em></label>
+                <input type="tel" name="phone" placeholder="手机号码" required>
+              </div>
+            </div>
+            <div class="form-row">
+              <div class="form-group">
+                <label>邮箱</label>
+                <input type="email" name="email" placeholder="电子邮箱（选填）">
+              </div>
+              <div class="form-group">
+                <label>咨询事项 <em>*</em></label>
+                <select name="matter" required>
+                  <option value="" disabled selected style="color:#999">请选择</option>
+                  <option value="公司商事">公司商事</option>
+                  <option value="建设工程">建设工程</option>
+                  <option value="知识产权">知识产权</option>
+                  <option value="刑事辩护">刑事辩护</option>
+                  <option value="金融保险">金融保险</option>
+                  <option value="行政法务">行政法务</option>
+                  <option value="婚姻家事">婚姻家事</option>
+                  <option value="其他">其他</option>
+                </select>
+              </div>
+            </div>
+            <div class="form-group">
+              <label>咨询内容</label>
+              <textarea name="content" placeholder="请简要描述您的问题..."></textarea>
+            </div>
+            <div class="form-group">
+              <label style="display:flex;align-items:center;gap:8px;cursor:pointer;">
+                <input type="checkbox" style="width:auto;" required>
+                <span style="font-size:13px;color:var(--text-light);">我已阅读并同意《隐私政策》，同意律所就咨询事项与我联系</span>
+              </label>
+            </div>
+            <button type="submit" class="form-submit">提交咨询</button>
+          </form>
+          <div class="form-success" id="formSuccess">
+            <h3>✅ 提交成功</h3>
+            <p>我们的律师将在<strong>24小时内</strong>与您联系，请保持手机畅通。<br>如需紧急法律帮助，请直接拨打：<strong id="emergencyPhone">025-85336806</strong></p>
+          </div>
+        </div>
+
+        <!-- Info -->
+        <div class="contact-info-card">
+          <h3>联系方式</h3>
+
+          <!-- Loading state -->
+          <div id="contactLoading" style="padding:20px 0;color:var(--text-light);font-size:14px;">
+            联系方式加载中...
+          </div>
+
+          <!-- Error state -->
+          <div id="contactError" style="display:none;padding:20px 0;color:#c0392b;font-size:14px;">
+            联系方式加载失败，请刷新重试或致电：025-85336806
+          </div>
+
+          <!-- Actual contact info (hidden until loaded) -->
+          <div id="contactInfoContent" style="display:none;">
+            <div class="contact-info-item">
+              <div class="icon">📍</div>
+              <div>
+                <h4>地址</h4>
+                <p id="infoAddress"></p>
+              </div>
+            </div>
+            <div class="contact-info-item">
+              <div class="icon">📞</div>
+              <div>
+                <h4>电话</h4>
+                <p>总机：<span id="infoPhone"></span><br>传真：<span id="infoFax"></span></p>
+              </div>
+            </div>
+            <div class="contact-info-item">
+              <div class="icon">📧</div>
+              <div>
+                <h4>邮箱</h4>
+                <p><span id="infoEmail"></span><br><span id="infoEmail2"></span></p>
+              </div>
+            </div>
+            <div class="contact-info-item">
+              <div class="icon">⏰</div>
+              <div>
+                <h4>办公时间</h4>
+                <p><span id="infoHoursWeekday"></span><br><span id="infoHoursSaturday"></span><br><span id="infoHoursSunday"></span></p>
+              </div>
+            </div>
+            <div class="contact-info-item">
+              <div class="icon">🚇</div>
+              <div>
+                <h4>交通指引</h4>
+                <p id="infoTraffic"></p>
+              </div>
+            </div>
+            <div class="contact-map">地图加载中...</div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Consultation Types -->
+  <section class="content-block">
+    <div class="container">
+      <div class="section-title">
+        <h2>咨询须知</h2>
+        <p>了解我们的服务流程</p>
+        <div class="line"></div>
+      </div>
+      <div class="grid-3">
+        <div style="background:var(--white);padding:32px 24px;border-radius:8px;box-shadow:var(--shadow);text-align:center;">
+          <div style="font-size:36px;margin-bottom:16px;">📋</div>
+          <h3 style="font-size:17px;color:var(--primary);margin-bottom:10px;">初步咨询</h3>
+          <p style="font-size:13px;color:var(--text-light);line-height:1.7;">填写表单或致电律所，简要说明您的问题类型和基本情况，我们将在24小时内回复</p>
+        </div>
+        <div style="background:var(--white);padding:32px 24px;border-radius:8px;box-shadow:var(--shadow);text-align:center;">
+          <div style="font-size:36px;margin-bottom:16px;">🔍</div>
+          <h3 style="font-size:17px;color:var(--primary);margin-bottom:10px;">案件评估</h3>
+          <p style="font-size:13px;color:var(--text-light);line-height:1.7;">律师对案件进行初步评估，分析法律风险、诉讼策略及费用预算，与您确认合作意向</p>
+        </div>
+        <div style="background:var(--white);padding:32px 24px;border-radius:8px;box-shadow:var(--shadow);text-align:center;">
+          <div style="font-size:36px;margin-bottom:16px;">✍️</div>
+          <h3 style="font-size:17px;color:var(--primary);margin-bottom:10px;">签订委托</h3>
+          <p style="font-size:13px;color:var(--text-light);line-height:1.7;">确认委托后，签订律师代理合同，律师将立即开展法律服务工作，全程保持沟通</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <h3>江苏<span>君劭</span>律师事务所</h3>
+          <p>以专业铸就信任，以品质赢得口碑。君劭律师始终秉持"受人之托，忠人之事"的服务理念，致力于为客户创造最大法律价值。</p>
+        </div>
+        <div class="footer-col">
+          <h4>快速链接</h4>
+          <ul>
+            <li><a href="about.html">关于我们</a></li>
+            <li><a href="team.html">律师团队</a></li>
+            <li><a href="practice-areas.html">专业领域</a></li>
+            <li><a href="insights.html">研究成果</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>服务领域</h4>
+          <ul>
+            <li><a href="practice-areas.html">公司商事</a></li>
+            <li><a href="practice-areas.html">建筑工程</a></li>
+            <li><a href="practice-areas.html">知识产权</a></li>
+            <li><a href="practice-areas.html">刑事辩护</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>联系我们</h4>
+          <ul id="footerContact">
+            <li>📍 <span id="footerAddress">加载中...</span></li>
+            <li>📞 <span id="footerPhone">加载中...</span></li>
+            <li>📧 <span id="footerEmail">加载中...</span></li>
+            <li>⏰ <span id="footerHours">加载中...</span></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span>© 2026 江苏君劭律师事务所 版权所有</span>
+        <span>苏ICP备19075247号</span>
+        <a href="privacy.html">隐私政策</a>
+        <span>
+        本网站所有内容及图片版权归属江苏君劭律师事务所，未经授权不得转载</span>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    const hamburger = document.getElementById('hamburger');
+    const mobileMenu = document.getElementById('mobileMenu');
+    hamburger.addEventListener('click', () => mobileMenu.classList.toggle('open'));
+    mobileMenu.querySelectorAll('a').forEach(link => link.addEventListener('click', () => mobileMenu.classList.remove('open')));
+
+    const contactForm = document.getElementById('contactForm');
+    const formSuccess = document.getElementById('formSuccess');
+    const submitBtn = contactForm.querySelector('.form-submit');
+    contactForm.addEventListener('submit', async function(e) {
+      e.preventDefault();
+      const name = contactForm.querySelector('[name=name]').value.trim();
+      const phone = contactForm.querySelector('[name=phone]').value.trim();
+      if (!name || !phone) return;
+      submitBtn.disabled = true;
+      submitBtn.textContent = '提交中...';
+      try {
+        const res = await fetch('/api/public/contact', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({
+            name: name,
+            phone: phone,
+            email: contactForm.querySelector('[name=email]').value.trim(),
+            matter: contactForm.querySelector('[name=matter]').value,
+            content: contactForm.querySelector('[name=content]').value.trim()
+          })
+        });
+        const data = await res.json();
+        if (data.success) {
+          contactForm.style.display = 'none';
+          formSuccess.classList.add('show');
+        } else {
+          alert(data.error || '提交失败，请稍后重试');
+          submitBtn.disabled = false;
+          submitBtn.textContent = '提交咨询';
+        }
+      } catch (err) {
+        alert('网络错误，请稍后重试');
+        submitBtn.disabled = false;
+        submitBtn.textContent = '提交咨询';
+      }
+    });
+
+    // Load contact info dynamically
+    async function loadContactInfo() {
+      const loadingEl = document.getElementById('contactLoading');
+      const errorEl = document.getElementById('contactError');
+      const contentEl = document.getElementById('contactInfoContent');
+
+      try {
+        const res = await fetch('/api/public/page/contact');
+        if (!res.ok) throw new Error('HTTP ' + res.status);
+        const data = await res.json();
+
+        // Populate contact-info-card
+        document.getElementById('infoAddress').textContent = (data.address || '').replace(/\n/g, '\n');
+        document.getElementById('infoPhone').textContent = data.phone || '';
+        document.getElementById('infoFax').textContent = data.fax || '';
+        document.getElementById('infoEmail').textContent = data.email || '';
+        document.getElementById('infoEmail2').textContent = data.email2 || '';
+        document.getElementById('infoHoursWeekday').textContent = data.hours_weekday || '';
+        document.getElementById('infoHoursSaturday').textContent = data.hours_saturday || '';
+        document.getElementById('infoHoursSunday').textContent = data.hours_sunday || '';
+        document.getElementById('infoTraffic').textContent = (data.traffic || '').replace(/\n/g, '\n');
+
+        // Populate footer
+        document.getElementById('footerAddress').textContent = (data.address || '').split('\n')[0];
+        document.getElementById('footerPhone').textContent = data.phone || '';
+        document.getElementById('footerEmail').textContent = data.email || '';
+        document.getElementById('footerHours').textContent = data.hours_weekday || '';
+
+        // Update emergency phone in success message
+        if (data.phone) {
+          document.getElementById('emergencyPhone').textContent = data.phone;
+        }
+
+        // Show content
+        loadingEl.style.display = 'none';
+        contentEl.style.display = 'block';
+      } catch (err) {
+        loadingEl.style.display = 'none';
+        errorEl.style.display = 'block';
+        console.error('Failed to load contact info:', err);
+      }
+    }
+
+    loadContactInfo();
+  </script>
+</body>
+</html>

@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>关于我们 - 江苏君劭律师事务所</title>
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 32 32%22%3E%3Crect width=%2232%22 height=%2232%22 rx=%224%22 fill=%22%231B3A5C%22/%3E%3Ctext x=%2250%25%22 y=%2255%25%22 dominant-baseline=%22middle%22 text-anchor=%22middle%22 font-size=%2218%22 fill=%22%23C9A84C%22 font-family=%22serif%22%3E%E5%90%9F%3C/text%3E%3C/svg%3E">
+  <meta name="description" content="江苏君劭律师事务所成立于2008年，致力于为企业与高净值人士提供专业、精准、稳健的法律服务。以"精专·稳健·可信"为核心理念，汇聚资深法律专家，打造精品团队。">
+  <meta property="og:title" content="关于我们 - 江苏君劭律师事务所">
+  <meta property="og:description" content="江苏君劭律师事务所，专注企业法律服务，精专·稳健·可信。">
+  <meta property="og:type" content="website">
+  <link rel="canonical" href="https://jsjunshao.lizheng.info/about.html">
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@300;400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <style>
+    /* About page only */
+    .values-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: var(--gutter); margin-top: 40px; }
+    .value-item { background: var(--white); padding: 32px 24px; border-radius: 8px; box-shadow: var(--shadow); text-align: center; transition: var(--transition); }
+    .value-item:hover { transform: translateY(-4px); box-shadow: var(--shadow-hover); }
+    .value-item .icon { width: 56px; height: 56px; background: linear-gradient(135deg, var(--primary), var(--secondary)); border-radius: 50%; margin: 0 auto 16px; display: flex; align-items: center; justify-content: center; font-size: 24px; }
+    .value-item h3 { font-size: 17px; color: var(--primary); margin-bottom: 8px; }
+    .value-item p { font-size: 13px; color: var(--text-light); line-height: 1.7; }
+    #intro-dynamic { min-height: 40px; }
+    #intro-dynamic .loading { text-align: center; padding: 40px; color: var(--text-light); }
+    @media (max-width: 768px) { .values-grid { grid-template-columns: 1fr; } }
+  </style>
+</head>
+<body>
+
+  <!-- Navigation -->
+  <nav class="navbar">
+    <div class="nav-logo">江苏<span>君劭</span>律师事务所</div>
+          <ul class="nav-links">
+        <li><a href="index.html">首页</a></li>
+        <li><a href="practice-areas.html">专业领域</a></li>
+        <li><a href="team.html">律师团队</a></li>
+        <li><a href="insights.html">研究成果</a></li>
+        <li><a href="about.html" class="active">关于我们</a></li>
+      </ul>
+    <a href="contact.html" class="nav-cta">免费咨询</a>
+    <button class="hamburger" id="hamburger" aria-label="菜单"><span></span><span></span><span></span></button>
+  </nav>
+  <div class="mobile-menu" id="mobileMenu">
+    <a href="index.html">首页</a><a href="about.html">关于我们</a><a href="practice-areas.html">专业领域</a><a href="team.html">律师团队</a><a href="insights.html">研究成果</a>
+    <a href="contact.html" class="mobile-cta">免费咨询</a>
+  </div>
+
+  <!-- Banner -->
+  <section class="page-banner">
+    <div class="banner-content">
+      <h1>关于<span>君劭</span></h1>
+      <p>以专业铸就信任，以品质赢得口碑</p>
+      <div class="breadcrumb"><a href="index.html">首页</a> / 关于我们</div>
+    </div>
+  </section>
+
+  <!-- Intro Dynamic -->
+  <section class="content-block bg-white">
+    <div class="container">
+      <div id="intro-dynamic"><div class="loading">加载中...</div></div>
+    </div>
+  </section>
+
+  <!-- Values -->
+  <section class="content-block">
+    <div class="container">
+      <div class="section-title">
+        <h2>核心价值观</h2>
+        <p>引领我们前行的精神准则</p>
+        <div class="line"></div>
+      </div>
+      <div class="values-grid">
+        <div class="value-item">
+          <div class="icon">⚖️</div>
+          <h3>专业为本</h3>
+          <p>深耕高端商事法律服务，以精湛的专业能力为客户创造价值</p>
+        </div>
+        <div class="value-item">
+          <div class="icon">🤝</div>
+          <h3>诚信执业</h3>
+          <p>坚守职业道德，保守客户秘密，建立长期信任关系</p>
+        </div>
+        <div class="value-item">
+          <div class="icon">🎯</div>
+          <h3>客户至上</h3>
+          <p>深入理解客户需求，提供精准、务实、可落地的法律方案</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Timeline -->
+  <section class="content-block bg-white">
+    <div class="container">
+      <div class="section-title">
+        <h2>发展历程</h2>
+        <p>十八年深耕，见证成长与荣耀</p>
+        <div class="line"></div>
+      </div>
+      <div class="timeline">
+        <div class="timeline-item">
+          <div class="year">2008</div>
+          <div class="dot"></div>
+          <div class="content">
+            <h4>律所成立</h4>
+            <p>江苏君劭律师事务所在南京正式成立，创始合伙人张明远律师带领初创团队，聚焦公司商事法律服务</p>
+          </div>
+        </div>
+        <div class="timeline-item">
+          <div class="year">2012</div>
+          <div class="dot"></div>
+          <div class="content">
+            <h4>规模化发展</h4>
+            <p>团队规模突破20人，设立建筑工程、知识产权业务部门，业务范围覆盖江苏全省</p>
+          </div>
+        </div>
+        <div class="timeline-item">
+          <div class="year">2016</div>
+          <div class="dot"></div>
+          <div class="content">
+            <h4>专业化升级</h4>
+            <p>确立"高端商事法律服务"定位，合伙人制度正式实施，多位资深律师加入</p>
+          </div>
+        </div>
+        <div class="timeline-item">
+          <div class="year">2020</div>
+          <div class="dot"></div>
+          <div class="content">
+            <h4>品牌深化</h4>
+            <p>乔迁新址，团队规模逾40人，学术研究成果丰硕，与多所高校建立合作关系</p>
+          </div>
+        </div>
+        <div class="timeline-item">
+          <div class="year">2024</div>
+          <div class="dot"></div>
+          <div class="content">
+            <h4>持续前行</h4>
+            <p>服务客户超过2000家，成功案例逾1500件，继续以专业服务成就客户价值</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Honors -->
+  <section class="content-block">
+    <div class="container">
+      <div class="section-title">
+        <h2>荣誉与资质</h2>
+        <p>来自行业与社会的认可</p>
+        <div class="line"></div>
+      </div>
+      <div class="honor-grid">
+        <div class="honor-card">
+          <div class="num">AAA</div>
+          <h4>江苏省优秀律师事务所</h4>
+          <p>连续多年获评AAA级诚信示范律所</p>
+        </div>
+        <div class="honor-card">
+          <div class="num">12+</div>
+          <h4>专业领域覆盖</h4>
+          <p>涵盖企业运营全链条法律服务</p>
+        </div>
+        <div class="honor-card">
+          <div class="num">30+</div>
+          <h4>省、市级荣誉</h4>
+          <p>律师荣获省、市优秀律师称号</p>
+        </div>
+        <div class="honor-card">
+          <div class="num">5+</div>
+          <h4>高校合作单位</h4>
+          <p>与南京大学等高校建立教学实践合作</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="content-block bg-white">
+    <div class="container" style="text-align:center;">
+      <h2 style="font-size:28px;color:var(--primary);margin-bottom:16px;">期待与您合作</h2>
+      <p style="color:var(--text-light);font-size:16px;margin-bottom:32px;max-width:560px;margin-left:auto;margin-right:auto;">无论您是企业还是个人，无论您面临何种法律挑战，君劭律师都将以专业、诚信、高效的服务，为您排忧解难。</p>
+      <a href="contact.html" class="btn-primary">立即咨询 →</a>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <h3>江苏<span>君劭</span>律师事务所</h3>
+          <p>以专业铸就信任，以品质赢得口碑。君劭律师始终秉持"受人之托，忠人之事"的服务理念，致力于为客户创造最大法律价值。</p>
+        </div>
+        <div class="footer-col">
+          <h4>快速链接</h4>
+          <ul>
+            <li><a href="about.html">关于我们</a></li>
+            <li><a href="team.html">律师团队</a></li>
+            <li><a href="practice-areas.html">专业领域</a></li>
+            <li><a href="insights.html">研究成果</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>服务领域</h4>
+          <ul>
+            <li><a href="practice-areas.html">公司商事</a></li>
+            <li><a href="practice-areas.html">建筑工程</a></li>
+            <li><a href="practice-areas.html">知识产权</a></li>
+            <li><a href="practice-areas.html">刑事辩护</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>联系我们</h4>
+          <ul>
+            <li>📍 江苏省南京市鼓楼区南通路118号3号楼6楼（世茂茂悦港）</li>
+            <li>📞 025-85336806</li>
+            <li>📧 1390279645@qq.com</li>
+            <li>⏰ 周一至周五 9:00-18:00</li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span>© 2026 江苏君劭律师事务所 版权所有</span>
+        <span>苏ICP备19075247号</span>
+        <a href="privacy.html">隐私政策</a>
+        <span>本网站所有内容及图片版权归属江苏君劭律师事务所，未经授权请联系授权</span>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    const hamburger = document.getElementById('hamburger');
+    const mobileMenu = document.getElementById('mobileMenu');
+    hamburger.addEventListener('click', () => mobileMenu.classList.toggle('open'));
+    mobileMenu.querySelectorAll('a').forEach(link => link.addEventListener('click', () => mobileMenu.classList.remove('open')));
+
+    // Load about page content dynamically
+    (async function() {
+      try {
+        const res = await fetch('/api/public/page/about');
+        if (!res.ok) throw new Error('not found');
+        const page = await res.json();
+        const container = document.getElementById('intro-dynamic');
+        if (page.content) {
+          container.innerHTML = page.content;
+        } else {
+          // Fallback static content
+          container.innerHTML = `
+            <div class="text-image-row">
+              <div class="text">
+                <h3>江苏君劭律师事务所</h3>
+                <p>江苏君劭律师事务所是一家专注于高端商事法律服务的综合性律师事务所。君劭，取"君子有为，劭义笃行"之意，寓意我们以君子之德立身，以专业之能服务客户。</p>
+                <p>律所汇聚了一批兼具深厚学术背景与丰富实战经验的资深律师，专注于公司商事、建设工程、知识产权、金融保险等高端业务领域，致力于为企业和个人客户提供专业、精准、高效的法律解决方案。</p>
+                <a href="team.html" class="btn-secondary" style="margin-top:8px;">了解团队 →</a>
+              </div>
+              <div class="img-wrap"><img src="/images/about-lobby.jpg" alt="律所大厅" style="width:100%;height:100%;object-fit:cover;border-radius:8px;"></div>
+            </div>
+            <div class="text-image-row reverse">
+              <div class="text">
+                <h3>服务理念</h3>
+                <p>君劭律师始终秉持"受人之托，忠人之事"的服务理念，将客户利益放在首位，以高度的责任心和专业的法律素养，守护每一位客户的合法权益。</p>
+                <p>我们深知法律服务不仅是解决纠纷，更是预防风险、创造价值。因此，我们注重与客户的长期合作关系，通过深入了解客户的业务模式和行业特点，提供超越期待的法律服务。</p>
+              </div>
+              <div class="img-wrap"><img src="/images/about-philosophy.jpg" alt="服务理念" style="width:100%;height:100%;object-fit:cover;border-radius:8px;"></div>
+            </div>`;
+        }
+      } catch (e) {
+        document.getElementById('intro-dynamic').innerHTML = '<div class="loading" style="color:#999;padding:40px;text-align:center;">内容加载失败</div>';
+      }
+    })();
+  </script>
+</body>
+</html>

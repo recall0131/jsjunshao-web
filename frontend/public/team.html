@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>律师团队 - 江苏君劭律师事务所</title>
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 32 32%22%3E%3Crect width=%2232%22 height=%2232%22 rx=%224%22 fill=%22%231B3A5C%22/%3E%3Ctext x=%2250%25%22 y=%2255%25%22 dominant-baseline=%22middle%22 text-anchor=%22middle%22 font-size=%2218%22 fill=%22%23C9A84C%22 font-family=%22serif%22%3E%E5%90%9F%3C/text%3E%3C/svg%3E">
+  <meta name="description" content="江苏君劭律师事务所律师团队，汇聚公司法、建设工程、知识产权、刑事辩护等领域的资深律师，合伙人直办，以专业深度和服务品质为客户创造价值。">
+  <meta property="og:title" content="律师团队 - 江苏君劭律师事务所">
+  <meta property="og:description" content="江苏君劭律师事务所律师团队，资深律师，合伙人直办，专业深度与服务品质并重。">
+  <meta property="og:type" content="website">
+  <link rel="canonical" href="https://jsjunshao.lizheng.info/team.html">
+  <>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@300;400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <style>
+    /* Private: Team page */
+    .partner-list { display: flex; flex-direction: column; gap: 28px; margin-bottom: 60px; }
+    .lawyer-card { background: var(--white); border-radius: 8px; overflow: hidden; box-shadow: var(--shadow); display: grid; grid-template-columns: 180px 1fr; transition: var(--transition); }
+    .lawyer-card:hover { transform: translateY(-3px); box-shadow: var(--shadow-hover); }
+    .lawyer-card .lawyer-photo { background: #CBD5E0; display: flex; align-items: center; justify-content: center; color: var(--text-light); font-size: 12px; }
+    .lawyer-card .lawyer-info { padding: 20px 24px; display: flex; flex-direction: column; justify-content: center; }
+    .lawyer-card .lawyer-info h3 { font-size: 17px; color: var(--primary); margin-bottom: 2px; }
+    .lawyer-card .lawyer-info .title { font-size: 12px; color: var(--accent); margin-bottom: 6px; }
+    .lawyer-card .lawyer-info p { font-size: 13px; color: var(--text-light); line-height: 1.6; }
+    .lawyer-card .lawyer-info .tags { margin-top: 10px; display: flex; gap: 6px; flex-wrap: wrap; }
+    @media (max-width: 480px) {
+      .lawyer-card { grid-template-columns: 1fr; }
+      .lawyer-card .lawyer-photo { height: 180px; }
+    }
+  </style>
+</head>
+<body>
+<!-- Navigation -->
+  <nav class="navbar">
+    <div class="nav-logo">江苏<span>君劭</span>律师事务所</div>
+          <ul class="nav-links">
+        <li><a href="index.html" class="active">首页</a></li>
+        <li><a href="practice-areas.html">专业领域</a></li>
+        <li><a href="team.html">律师团队</a></li>
+        <li><a href="insights.html">研究成果</a></li>
+        <li><a href="about.html">关于我们</a></li>
+      </ul>
+    <a href="contact.html" class="nav-cta">免费咨询</a>
+    <button class="hamburger" id="hamburger" aria-label="菜单"><span></span><span></span><span></span></button>
+  </nav>
+  <!-- Founders -->
+  <section class="content-block bg-white">
+    <div class="container">
+      <div class="section-title">
+        <h2>创始合伙人</h2>
+        <p>深耕行业，引领发展</p>
+        <div class="line"></div>
+      </div>
+      <div class="partner-list" id="founders-list">
+        <div class="loading" style="text-align:center;padding:40px;color:var(--text-light);">加载中...</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Partners -->
+  <section class="content-block">
+    <div class="container">
+      <div class="section-title">
+        <h2>合伙人</h2>
+        <p>专业精深，协同共进</p>
+        <div class="line"></div>
+      </div>
+      <div class="partner-list" id="partners-list">
+        <div class="loading" style="text-align:center;padding:40px;color:var(--text-light);">加载中...</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Associates -->
+  <section class="content-block bg-white">
+    <div class="container">
+      <div class="section-title">
+        <h2>执业律师</h2>
+        <p>专业扎实，经验丰富</p>
+        <div class="line"></div>
+      </div>
+      <div class="grid-4" id="associates-list">
+        <div class="loading" style="text-align:center;padding:40px;color:var(--text-light);">加载中...</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Join CTA -->
+  <section class="content-block">
+    <div class="container" style="text-align:center;">
+      <h2 style="font-size:28px;color:var(--primary);margin-bottom:16px;">与优秀团队同行</h2>
+      <p style="color:var(--text-light);font-size:16px;margin-bottom:32px;max-width:560px;margin-left:auto;margin-right:auto;">君劭律师事务所常年欢迎志同道合的法律人才加入，共同成长，共创未来。</p>
+      <a href="contact.html" class="btn-primary">联系我们 →</a>
+    </div>
+  </section>
+
+<footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <h3>江苏<span>君劭</span>律师事务所</h3>
+          <p>以专业铸就信任，以品质赢得口碑。君劭律师始终秉持"受人之托，忠人之事"的服务理念，致力于为客户创造最大法律价值。</p>
+        </div>
+        <div class="footer-col">
+          <h4>快速链接</h4>
+          <ul>
+            <li><a href="about.html">关于我们</a></li>
+            <li><a href="team.html">律师团队</a></li>
+            <li><a href="practice-areas.html">专业领域</a></li>
+            <li><a href="insights.html">研究成果</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>服务领域</h4>
+          <ul>
+            <li><a href="practice-areas.html">公司商事</a></li>
+            <li><a href="practice-areas.html">建筑工程</a></li>
+            <li><a href="practice-areas.html">知识产权</a></li>
+            <li><a href="practice-areas.html">刑事辩护</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>联系我们</h4>
+          <ul>
+            <li>📍 江苏省南京市鼓楼区南通路118号3号楼6楼（世茂茂悦港）</li>
+            <li>📞 025-85336806</li>
+            <li>📧 1390279645@qq.com</li>
+            <li>⏰ 周一至周五 9:00-18:00</li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span>© 2026 江苏君劭律师事务所 版权所有</span>
+        <span>苏ICP备19075247号</span>
+        <a href="privacy.html">隐私政策</a>
+        <span>本网站所有内容及图片版权归属江苏君劭律师事务所，未经授权请联系授权</span>
+      </div>
+    </div>
+  </footer>
+  <script>
+    async function loadLawyers() {
+      try {
+        var res = await fetch('/api/public/lawyers');
+        if (!res.ok) throw new Error('Network error');
+        var lawyers = await res.json();
+
+        var founders = [];
+        var partners = [];
+        var associates = [];
+
+        for (var i = 0; i < lawyers.length; i++) {
+          var l = lawyers[i];
+          if (l.role === 'partner' || l.role === '高级合伙人' || l.role === '创始合伙人') {
+            if (l.sort_order <= 4) {
+              founders.push(l);
+            } else {
+              partners.push(l);
+            }
+          } else {
+            associates.push(l);
+          }
+        }
+
+        renderCards('founders-list', founders, 'partner-card', 'partner-photo', 'partner-info');
+        renderCards('partners-list', partners, 'partner-card', 'partner-photo', 'partner-info');
+        renderCards('associates-list', associates, 'team-card', 'team-photo', 'team-info');
+      } catch (e) {
+        console.error('Load lawyers failed:', e);
+        var ids = ['founders-list', 'partners-list', 'associates-list'];
+        for (var j = 0; j < ids.length; j++) {
+          var el = document.getElementById(ids[j]);
+          if (el) el.innerHTML = '<p style="text-align:center;padding:40px;">数据加载失败，请刷新页面</p>';
+        }
+      }
+    }
+
+    function renderCards(containerId, lawyerList, cardClass, imgClass, infoClass) {
+      var container = document.getElementById(containerId);
+      if (!container) return;
+      container.innerHTML = '';
+      for (var i = 0; i < lawyerList.length; i++) {
+        var l = lawyerList[i];
+        var card = document.createElement('div');
+        card.className = cardClass;
+
+        var img = document.createElement('img');
+        img.className = imgClass;
+        img.alt = l.name || '';
+        img.src = l.photo_url || '/images/lawyers/default.jpg';
+        img.onerror = function() { this.src = '/images/lawyers/default.jpg'; };
+
+        var info = document.createElement('div');
+        info.className = infoClass;
+
+        var h3 = document.createElement('h3');
+        h3.textContent = l.name || '';
+
+        var titleDiv = document.createElement('div');
+        titleDiv.className = 'title';
+        titleDiv.textContent = l.title || '';
+
+        var p = document.createElement('p');
+        p.textContent = l.bio || '';
+
+        info.appendChild(h3);
+        info.appendChild(titleDiv);
+        info.appendChild(p);
+        card.appendChild(img);
+        card.appendChild(info);
+        container.appendChild(card);
+      }
+    }
+
+    loadLawyers();
+  </script>
+
+  <script>
+    var hamburger = document.getElementById('hamburger');
+    var mobileMenu = document.getElementById('mobileMenu');
+    if (hamburger && mobileMenu) {
+      hamburger.addEventListener('click', function() { mobileMenu.classList.toggle('open'); });
+      mobileMenu.querySelectorAll('a').forEach(function(link) { link.addEventListener('click', function() { mobileMenu.classList.remove('open'); }); });
+    }
+  </script>
+</body>
+</html>

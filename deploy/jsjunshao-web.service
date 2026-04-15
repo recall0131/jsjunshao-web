@@ -1,0 +1,17 @@
+[Unit]
+Description=jsjunshao-web Backend API
+After=network.target
+
+[Service]
+Type=simple
+User=root
+WorkingDirectory=/var/www/jsjunshao-web
+Environment=NODE_ENV=production
+ExecStart=/usr/bin/node /var/www/jsjunshao-web/backend/src/server.js
+Restart=always
+RestartSec=5
+StandardOutput=append:/var/log/jsjunshao-web/server.log
+StandardError=append:/var/log/jsjunshao-web/error.log
+
+[Install]
+WantedBy=multi-user.target

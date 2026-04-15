@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>专业领域 - 江苏君劭律师事务所</title>
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 32 32%22%3E%3Crect width=%2232%22 height=%2232%22 rx=%224%22 fill=%22%231B3A5C%22/%3E%3Ctext x=%2250%25%22 y=%2255%25%22 dominant-baseline=%22middle%22 text-anchor=%22middle%22 font-size=%2218%22 fill=%22%23C9A84C%22 font-family=%22serif%22%3E%E5%90%9F%3C/text%3E%3C/svg%3E">
+  <meta name="description" content="江苏君劭律师事务所专业领域涵盖公司商事、建设工程、知识产权、行政法务、刑事辩护、金融保险等，为企业提供全链条法律服务，精准匹配专业律师。">
+  <meta property="og:title" content="专业领域 - 江苏君劭律师事务所">
+  <meta property="og:description" content="江苏君劭律师事务所专业领域：公司商事、建设工程、知识产权、行政法务、刑事辩护、金融保险。">
+  <meta property="og:type" content="website">
+  <link rel="canonical" href="https://jsjunshao.lizheng.info/practice-areas.html">
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@300;400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <style>
+    .area-card { background: var(--white); border-radius: 8px; padding: 28px 24px; box-shadow: var(--shadow); display: flex; gap: 16px; align-items: center; transition: var(--transition); cursor: pointer; margin-bottom: 14px; }
+    .area-card:hover { transform: translateX(6px); box-shadow: var(--shadow-hover); }
+    .area-card .area-icon { width: 52px; height: 52px; background: linear-gradient(135deg, var(--primary), var(--secondary)); border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 22px; flex-shrink: 0; }
+    .area-card h3 { font-size: 17px; color: var(--primary); margin-bottom: 4px; }
+    .area-card p { font-size: 13px; color: var(--text-light); line-height: 1.6; flex: 1; }
+    .area-card .arrow { color: var(--accent); font-size: 18px; flex-shrink: 0; }
+    /* Tab content dynamic */
+    .tab-content { display: none; }
+    .tab-content.active { display: block; }
+    .practice-detail-card { background: var(--white); border-radius: 8px; box-shadow: var(--shadow); padding: 28px; }
+    .pd-header { display: flex; gap: 16px; align-items: center; margin-bottom: 20px; }
+    .pd-icon { width: 52px; height: 52px; background: linear-gradient(135deg, var(--primary), var(--secondary)); border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 22px; flex-shrink: 0; }
+    .pd-header h2 { font-size: 20px; color: var(--primary); margin-bottom: 4px; }
+    .pd-header p { font-size: 13px; color: var(--text-light); }
+    .pd-body p { color: var(--text); font-size: 14px; line-height: 1.8; margin-bottom: 16px; }
+    .pd-list { list-style: none; padding: 0; display: grid; grid-template-columns: repeat(2, 1fr); gap: 8px; }
+    .pd-list li { font-size: 13px; color: var(--text-light); padding: 6px 0; border-bottom: 1px dashed #eee; }
+    .pd-list li:before { content: "• "; color: var(--accent); margin-right: 4px; }
+    #tabNav { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 28px; }
+    #tabNav button { background: var(--bg); border: 1px solid #e0e0e0; border-radius: 20px; padding: 8px 18px; font-size: 14px; color: var(--text); cursor: pointer; transition: var(--transition); }
+    #tabNav button:hover { border-color: var(--primary); color: var(--primary); }
+    #tabNav button.active { background: var(--primary); color: var(--white); border-color: var(--primary); }
+    #loading-msg { text-align: center; padding: 60px; color: var(--text-light); }
+    @media (max-width: 768px) { .pd-list { grid-template-columns: 1fr; } }
+  </style>
+</head>
+<body>
+
+  <nav class="navbar">
+    <div class="nav-logo">江苏<span>君劭</span>律师事务所</div>
+          <ul class="nav-links">
+        <li><a href="index.html" class="active">首页</a></li>
+        <li><a href="practice-areas.html">专业领域</a></li>
+        <li><a href="team.html">律师团队</a></li>
+        <li><a href="insights.html">研究成果</a></li>
+        <li><a href="about.html">关于我们</a></li>
+      </ul>
+    <a href="contact.html" class="nav-cta">免费咨询</a>
+    <button class="hamburger" id="hamburger" aria-label="菜单"><span></span><span></span><span></span></button>
+  </nav>
+  <div class="mobile-menu" id="mobileMenu">
+    <a href="index.html">首页</a><a href="about.html">关于我们</a><a href="practice-areas.html">专业领域</a><a href="team.html">律师团队</a><a href="insights.html">研究成果</a>
+    <a href="contact.html" class="mobile-cta">免费咨询</a>
+  </div>
+
+  <section class="page-banner">
+    <div class="banner-content">
+      <h1>专业<span>领域</span></h1>
+      <p>覆盖企业运营全链条的精品法律服务</p>
+      <div class="breadcrumb"><a href="index.html">首页</a> / 专业领域</div>
+    </div>
+  </section>
+
+  <section class="content-block bg-white">
+    <div class="container">
+      <div class="section-title">
+        <h2>服务领域</h2>
+        <p>点击标签查看各专业领域详情</p>
+        <div class="line"></div>
+      </div>
+
+      <div id="loading-msg">加载专业领域...</div>
+      <div id="tabNav"></div>
+      <div id="tabPanels"></div>
+
+      <div style="margin-top:50px;" id="quickNavSection" style="display:none;">
+        <div class="section-title" style="margin-bottom:30px;">
+          <h2>快速导航</h2>
+          <p>点击直达专业详情</p>
+          <div class="line"></div>
+        </div>
+        <div class="grid-3" id="quickNavGrid"></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="content-block">
+    <div class="container" style="text-align:center;">
+      <h2 style="font-size:28px;color:var(--primary);margin-bottom:16px;">不确定需要哪个领域的服务？</h2>
+      <p style="color:var(--text-light);font-size:16px;margin-bottom:32px;">我们的律师会根据您的情况免费评估并推荐最合适的服务方案。</p>
+      <a href="contact.html" class="btn-primary">免费咨询 →</a>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <h3>江苏<span>君劭</span>律师事务所</h3>
+          <p>以专业铸就信任，以品质赢得口碑。君劭律师始终秉持"受人之托，忠人之事"的服务理念，致力于为客户创造最大法律价值。</p>
+        </div>
+        <div class="footer-col">
+          <h4>快速链接</h4>
+          <ul><li><a href="about.html">关于我们</a></li><li><a href="team.html">律师团队</a></li><li><a href="practice-areas.html">专业领域</a></li><li><a href="insights.html">研究成果</a></li></ul>
+        </div>
+        <div class="footer-col">
+          <h4>服务领域</h4>
+          <ul><li><a href="practice-areas.html">公司商事</a></li><li><a href="practice-areas.html">建筑工程</a></li><li><a href="practice-areas.html">知识产权</a></li><li><a href="practice-areas.html">刑事辩护</a></li></ul>
+        </div>
+        <div class="footer-col">
+          <h4>联系我们</h4>
+          <ul><li>📍 江苏省南京市鼓楼区南通路118号3号楼6楼（世茂茂悦港）</li><li>📞 025-85336806</li><li>📧 1390279645@qq.com</li><li>⏰ 周一至周五 9:00-18:00</li></ul>
+        </div>
+      </div>
+      <div class="footer-bottom"><span>© 2026 江苏君劭律师事务所 版权所有</span><span>苏ICP备19075247号</span></div>
+        <a href="privacy.html">隐私政策</a>
+        <span>本网站所有内容及图片版权归属江苏君劭律师事务所，未经授权请联系授权</span>
+    </div>
+  </footer>
+
+  <script>
+    const hamburger = document.getElementById('hamburger');
+    const mobileMenu = document.getElementById('mobileMenu');
+    hamburger.addEventListener('click', () => mobileMenu.classList.toggle('open'));
+    mobileMenu.querySelectorAll('a').forEach(link => link.addEventListener('click', () => mobileMenu.classList.remove('open')));
+
+    // Image map for practice areas
+    const areaImages = {
+      '公司商事': '/images/practice/company-commercial.jpg',
+      '建筑工程': '/images/practice/construction.jpg',
+      '知识产权': '/images/practice/ip.png',
+      '行政法务': '/images/practice/admin-law.png',
+      '刑事辩护': '/images/practice/criminal.png',
+      '金融保险': '/images/practice/finance.jpg'
+    };
+    const areaSubtitles = {
+      '公司商事': '公司全生命周期法律服务 | 商事争议解决',
+      '建筑工程': '建设工程全程法律服务 | 房地产综合法律顾问',
+      '知识产权': '专利商标著作权全方位保护 | 侵权诉讼',
+      '行政法务': '行政处罚听证代理 | 行政复议与诉讼',
+      '刑事辩护': '经济类刑事案件辩护 | 企业及高管刑事风险防控',
+      '金融保险': '金融纠纷诉讼 | 私人财富法律规划'
+    };
+
+    let currentAreas = [];
+
+    function switchTab(id) {
+      document.querySelectorAll('#tabNav button').forEach(b => b.classList.remove('active'));
+      document.querySelectorAll('.tab-content').forEach(c => c.classList.remove('active'));
+      document.querySelector('#tabNav button[data-tab="' + id + '"]').classList.add('active');
+      document.getElementById('tab-' + id).classList.add('active');
+      document.querySelector('.practice-detail-card')?.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }
+
+    async function loadPracticeAreas() {
+      try {
+        const res = await fetch('/api/public/practice-areas');
+        if (!res.ok) throw new Error();
+        currentAreas = await res.json();
+
+        const tabNav = document.getElementById('tabNav');
+        const tabPanels = document.getElementById('tabPanels');
+        const quickNavGrid = document.getElementById('quickNavGrid');
+        const quickNavSection = document.getElementById('quickNavSection');
+
+        document.getElementById('loading-msg').style.display = 'none';
+        quickNavSection.style.display = 'block';
+
+        // Generate tabs and panels
+        currentAreas.forEach((area, i) => {
+          const tabId = 'tab-' + area.id;
+          const isActive = i === 0 ? 'active' : '';
+
+          // Parse description: first paragraph + list
+          const parts = area.description.split('涵盖：');
+          const introText = parts[0] || '';
+          const listText = parts[1] || '';
+          const listItems = listText ? listText.split('、').map(s => s.trim()).filter(s => s) : [];
+
+          // Tab button
+          const btn = document.createElement('button');
+          btn.className = i === 0 ? 'active' : '';
+          btn.dataset.tab = tabId;
+          btn.textContent = area.icon + ' ' + area.name;
+          btn.addEventListener('click', () => switchTab(tabId));
+          tabNav.appendChild(btn);
+
+          // Tab panel
+          const panel = document.createElement('div');
+          panel.className = 'tab-content' + (i === 0 ? ' active' : '');
+          panel.id = tabId;
+          panel.innerHTML = `
+            <div style="padding:0 0 20px 0;">
+              <img src="${areaImages[area.name] || '/images/practice/company-commercial.jpg'}" alt="${area.name}" style="width:100%;height:200px;object-fit:cover;border-radius:8px;">
+            </div>
+            <div class="practice-detail-card">
+              <div class="pd-header">
+                <div class="pd-icon">${area.icon}</div>
+                <div><h2>${area.name}</h2><p>${areaSubtitles[area.name] || ''}</p></div>
+              </div>
+              <div class="pd-body">
+                ${introText ? `<p>${introText}</p>` : ''}
+                ${listItems.length > 0 ? `<ul class="pd-list">${listItems.map(item => `<li>${item}</li>`).join('')}</ul>` : ''}
+              </div>
+            </div>`;
+          tabPanels.appendChild(panel);
+
+          // Quick nav card
+          const card = document.createElement('div');
+          card.className = 'area-card';
+          card.addEventListener('click', () => switchTab(tabId));
+          card.innerHTML = `
+            <div class="area-icon">${area.icon}</div>
+            <div><h3>${area.name}</h3><p>${introText.substring(0, 40)}${introText.length > 40 ? '...' : ''}</p></div>
+            <div class="arrow">→</div>`;
+          quickNavGrid.appendChild(card);
+        });
+      } catch (e) {
+        document.getElementById('loading-msg').textContent = '专业领域加载失败，请刷新页面';
+      }
+    }
+
+    loadPracticeAreas();
+  </script>
+</body>
+</html>

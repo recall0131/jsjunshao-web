@@ -1,0 +1,46 @@
+# Dependencies
+node_modules/
+*/node_modules/
+
+# Environment variables (contains secrets)
+.env
+.env.local
+.env.*.local
+
+# Database files (contain live data)
+*.db
+*.db-shm
+*.db-wal
+
+# Logs
+*.log
+logs/
+/var/log/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Build output (generated)
+dist/
+build/
+
+# Uploads (runtime data)
+uploads/
+images/lawyers/*
+!images/lawyers/.gitkeep
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# SSL certificates (server-specific)
+*.crt
+*.key
+*.pem
+
+# Backups
+*.bak
+*.backup
