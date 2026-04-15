@@ -1,64 +1,46 @@
 #!/bin/bash
-# jsjunshao-web 启动脚本
-# 用法: ./scripts/start.sh
+# JSJUNSHAO 部署脚本（Docker 版，适用于 GLIBC 不兼容的宿主机的 Node 部署）
+#
+# 用法: bash start.sh
+#   首次: 会构建镜像
+#   已有镜像: 直接重启容器
 
 set -e
+SCRIPT_DIR="$(cd "$(dirname "$0")/.." && pwd)"
+BACKEND_DIR="$SCRIPT_DIR/backend"
 
-# 项目根目录
-SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
-PROJECT_ROOT="$(dirname "$SCRIPT_DIR")"
-BACKEND_DIR="$PROJECT_ROOT/backend"
-FRONTEND_DIR="$PROJECT_ROOT/frontend/public"
+echo "=== JSJUNSHAO 部署脚本 ==="
 
-# 加载环境变量
-if [ -f "$PROJECT_ROOT/.env" ]; then
-  export $(grep -v '^#' "$PROJECT_ROOT/.env" | xargs)
-fi
+# 构建镜像（当源码变动时）
+echo "[1/3] 构建 Docker 镜像..."
+docker build -t jsjunshao-web "$BACKEND_DIR"
 
-# 默认值
-export PORT="${PORT:-3000}"
-export STATIC_DIR="${FRONTEND_DIR}"
-export DB_PATH="${DB_PATH:-$BACKEND_DIR/data/jsjunshao.db}"
-export IMAGE_UPLOAD_DIR="${IMAGE_UPLOAD_DIR:-$FRONTEND_DIR/images/lawyers}"
-export JWT_SECRET="${JWT_SECRET:-jsjunshao-admin-secret-2026}"
+# 停止旧容器
+echo "[2/3] 重启容器..."
+docker stop jsjunshao-web 2>/dev/null || true
+docker rm jsjunshao-web 2>/dev/null || true
 
-echo "=========================================="
-echo "江苏君劭律师事务所 - 启动配置"
-echo "=========================================="
-echo "PORT: $PORT"
-echo "STATIC_DIR: $STATIC_DIR"
-echo "DB_PATH: $DB_PATH"
-echo "IMAGE_UPLOAD_DIR: $IMAGE_UPLOAD_DIR"
-echo "=========================================="
+# 启动容器
+docker run -d \
+  --name jsjunshao-web \
+  -p 3000:3000 \
+  -v "$BACKEND_DIR/data:/app/data" \
+  -v "$SCRIPT_DIR/frontend/public:/app/public:ro" \
+  -v "$BACKEND_DIR/public:/app/admin-static:ro" \
+  -e PORT=3000 \
+  -e NODE_ENV=production \
+  -e DB_PATH=/app/data/jsjunshao.db \
+  -e STATIC_DIR=/app/public \
+  -e IMAGE_UPLOAD_DIR=/app/data/images \
+  -e JWT_SECRET=jsjunshao-admin-secret-2026 \
+  --restart unless-stopped \
+  jsjunshao-web
 
-# 确保图片目录存在
-mkdir -p "$IMAGE_UPLOAD_DIR"
+echo "[3/3] 等待启动..."
+sleep 3
+docker logs jsjunshao-web 2>&1 | tail -3
 
-# 检查数据库
-if [ ! -f "$DB_PATH" ]; then
-  echo "错误: 数据库文件不存在: $DB_PATH"
-  exit 1
-fi
-
-# 启动服务
-cd "$BACKEND_DIR"
-exec node src/server.js
-
-# ==================== Docker 部署命令 ====================
-# 在 dejavu 上运行（Node.js GLIBC 兼容性问题，需用 Docker）：
-#
-#   docker run -d \\
-#     --name jsjunshao-web \\
-#     -p 3000:3000 \\
-#     -v /var/www/jsjunshao-web/backend/data:/app/data \\
-#     -e PORT=3000 \\
-#     -e NODE_ENV=production \\
-#     -e DB_PATH=/app/data/jsjunshao.db \\
-#     -e STATIC_DIR=/app/public \\
-#     -e IMAGE_UPLOAD_DIR=/app/public/images/lawyers \\
-#     -e JWT_SECRET=jsjunshao-admin-secret-2026 \\
-#     --restart unless-stopped \\
-#     jsjunshao-web
-#
-# 首次部署需要先构建镜像:
-#   docker build -t jsjunshao-web /var/www/jsjunshao-web/backend/
+echo ""
+echo "=== 完成 ==="
+echo "公网:   https://jsjunshao.lizheng.info"
+echo "管理后台: https://jsjunshao.lizheng.info/admin/"

@@ -6,13 +6,15 @@ services:
     ports:
       - "3000:3000"
     volumes:
-      - ./backend/data:/app/data
+      - ./backend/data:/app/data          # SQLite 数据库
+      - ./frontend/public:/app/public:ro  # 公开网站静态文件
+      - ./backend/public:/app/admin-static:ro  # 管理后台静态文件
     environment:
       - PORT=3000
       - NODE_ENV=production
       - DB_PATH=/app/data/jsjunshao.db
       - STATIC_DIR=/app/public
-      - IMAGE_UPLOAD_DIR=/app/public/images/lawyers
+      - IMAGE_UPLOAD_DIR=/app/data/images
       - JWT_SECRET=${JWT_SECRET:-jsjunshao-admin-secret-2026}
     restart: unless-stopped
     healthcheck:
