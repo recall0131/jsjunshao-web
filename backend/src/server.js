@@ -26,7 +26,8 @@ app.use(express.urlencoded({ extended: true }));
 app.use(express.static(STATIC_DIR));
 
 // Database setup
-const db = new Database(path.join(__dirname, 'jsjunshao.db'));
+const DB_FILE = process.env.DB_PATH || path.join(__dirname, 'data', 'jsjunshao.db');
+const db = new Database(DB_FILE);
 
 // Initialize database tables
 db.exec(`
