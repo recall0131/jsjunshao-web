@@ -43,3 +43,22 @@ fi
 # 启动服务
 cd "$BACKEND_DIR"
 exec node src/server.js
+
+# ==================== Docker 部署命令 ====================
+# 在 dejavu 上运行（Node.js GLIBC 兼容性问题，需用 Docker）：
+#
+#   docker run -d \\
+#     --name jsjunshao-web \\
+#     -p 3000:3000 \\
+#     -v /var/www/jsjunshao-web/backend/data:/app/data \\
+#     -e PORT=3000 \\
+#     -e NODE_ENV=production \\
+#     -e DB_PATH=/app/data/jsjunshao.db \\
+#     -e STATIC_DIR=/app/public \\
+#     -e IMAGE_UPLOAD_DIR=/app/public/images/lawyers \\
+#     -e JWT_SECRET=jsjunshao-admin-secret-2026 \\
+#     --restart unless-stopped \\
+#     jsjunshao-web
+#
+# 首次部署需要先构建镜像:
+#   docker build -t jsjunshao-web /var/www/jsjunshao-web/backend/
