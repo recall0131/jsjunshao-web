@@ -323,12 +323,12 @@ app.get('/api/export', authMiddleware, (req, res) => {
 });
 
 // Static admin files
-app.use('/admin', express.static(path.join(__dirname, 'public')));
+app.use('/admin', express.static('/app/admin-static'));
 
 app.get('/admin', (req, res) => res.redirect('/admin/index.html'));
-app.get('/admin/login.html', (req, res) => res.sendFile(path.join(__dirname, 'public', 'login.html')));
+app.get('/admin/login.html', (req, res) => res.sendFile(path.join('/app/admin-static', 'login.html')));
 app.get('/admin/:page', (req, res) => {
-  const filePath = path.join(__dirname, 'public', req.params.page);
+  const filePath = path.join('/app/admin-static', req.params.page);
   if (fs.existsSync(filePath)) {
     res.sendFile(filePath);
   } else {
