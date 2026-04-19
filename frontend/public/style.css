@@ -105,10 +105,10 @@ ul { list-style: none; }
 .grid-4 { display: grid; grid-template-columns: repeat(4, 1fr); gap: 16px; }
 
 /* ===================== Cards ===================== */
-.team-card { background: var(--bg-white); border-radius: var(--radius-card); overflow: hidden; transition: var(--transition); border: 1px solid transparent; }
+.team-card { background: var(--bg-white); border-radius: var(--radius-card); transition: var(--transition); border: 1px solid transparent; }
 .team-card:hover { border-color: var(--blue); box-shadow: var(--shadow-hover); transform: translateY(-3px); }
 .team-card .team-photo, .team-card img.team-photo { height: 260px; background: var(--bg-gray-dark); overflow: hidden; }
-.team-card img.team-photo { width: 100%; height: 260px; object-fit: cover; object-position: center top; border-radius: 0; }
+.team-card img.team-photo { width: 100%; height: auto; object-fit: cover; object-position: center top; border-radius: 0; }
 .team-card .team-info { padding: 22px 18px; text-align: center; }
 .team-card .team-info h3 { font-size: 1.0625rem; color: var(--black); margin-bottom: 4px; font-weight: 600; }
 .team-card .team-info .title { font-size: 0.75rem; color: var(--blue); font-weight: 500; margin-bottom: 8px; display: block; }
@@ -116,10 +116,10 @@ ul { list-style: none; }
 
 /* Partner large card */
 .partner-list { display: flex; flex-direction: column; gap: 20px; margin-bottom: 60px; }
-.partner-card { background: var(--bg-white); border-radius: var(--radius-card); overflow: hidden; box-shadow: var(--shadow-card); display: grid; grid-template-columns: 280px 1fr; transition: var(--transition); border: 1px solid transparent; }
+.partner-card { background: var(--bg-white); border-radius: var(--radius-card); box-shadow: var(--shadow-card); display: grid; grid-template-columns: 280px 1fr; transition: var(--transition); border: 1px solid transparent; }
 .partner-card:hover { border-color: var(--blue); box-shadow: var(--shadow-hover); transform: translateY(-3px); }
 .partner-card .partner-photo:not(img) { background: var(--bg-gray-dark); display: flex; align-items: center; justify-content: center; color: var(--gray-light); font-size: 0.8125rem; min-height: 320px; }
-.partner-card img.partner-photo { width: 100%; height: 320px; object-fit: cover; object-position: center top; border-radius: 0; }
+.partner-card img.partner-photo { border-radius: 0;  width: 100%; height: auto; object-fit: cover; object-position: center top; border-radius: 0; }
 .partner-card .partner-info { padding: 36px; display: flex; flex-direction: column; justify-content: center; }
 .partner-card .partner-info h3 { font-size: 1.5rem; color: var(--black); margin-bottom: 4px; font-weight: 600; letter-spacing: -0.2px; }
 .partner-card .partner-info .title { font-size: 0.875rem; color: var(--blue); margin-bottom: 16px; font-weight: 500; }
@@ -249,11 +249,9 @@ ul { list-style: none; }
 
 /* ===================== Partner Photo (circular) ===================== */
 .partner-photo {
-  width: 120px; height: 120px;
-  border-radius: 50%;
+  border-radius: 0;
   object-fit: cover;
-  border: 3px solid var(--gold);
-  flex-shrink: 0;
+  border: none;
 }
 
 /* ===================== Practice Detail Card ===================== */
@@ -290,7 +288,7 @@ ul { list-style: none; }
   .side-nav { position: static; }
   .side-nav a { padding: 10px 16px; }
   .partner-card { grid-template-columns: 1fr; }
-  .partner-card img.partner-photo { height: 280px; }
+  .partner-card img.partner-photo { width: 100%; height: auto; object-fit: cover; }
   .contact-layout { grid-template-columns: 1fr; }
   .practice-detail-card .pd-list { grid-template-columns: 1fr; }
   .honor-grid { grid-template-columns: repeat(2, 1fr); }
